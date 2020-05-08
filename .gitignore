@@ -1,6 +1,9 @@
 # Pycharm
 .idea/
+# Output files
 output.csv
+output.xml
+output.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
