@@ -1,5 +1,5 @@
 # Scrapy-Projects
-Source code for my Scrapy projects
+Source codes for my web scraping projects using Scrapy
 
 ## Installation
 - python3.6
