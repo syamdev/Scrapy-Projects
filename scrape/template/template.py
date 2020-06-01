@@ -20,7 +20,7 @@ class TemplateSpider(scrapy.Spider):
     custom_settings = {
         # uncomment below settings to slow down the scraper
         # 'CONCURRENT_REQUESTS_PER_DOMAIN': 2,
-        # 'DOWNLOAD_DELAY': 1
+        # 'DOWNLOAD_DELAY': 1,
         'FEED_FORMAT': 'csv',
         'FEED_URI': 'output.csv'
     }
@@ -36,7 +36,7 @@ class TemplateSpider(scrapy.Spider):
             # next_page = self.start_url + urllib.parse.urlencode(self.params)
 
             # crawl next page URL
-            # yield scrapy.Request(url=next_page, headers=self.headers, callback=self.parse_links)
+            # yield scrapy.Request(url=next_page, headers=self.headers, callback=self.parse)
 
     def parse(self, response):
         pass
