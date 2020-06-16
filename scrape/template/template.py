@@ -7,20 +7,24 @@ import json
 class TemplateSpider(scrapy.Spider):
     # spider name
     name = 'spider_name'
+    allowed_domains = ['xxxxxx.xxxxxx.com']
+
 
     # base URL
     start_url = 'https://www.xxxxxxxxx.com/'
+    # start_urls = ['http://www.xxxxxxxxx.com/']
 
     # custom headers
-    headers = {
-        'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
-    }
+    # headers = {
+    #     'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    # }
 
     # custom settings
     custom_settings = {
         # uncomment below settings to slow down the scraper
         # 'CONCURRENT_REQUESTS_PER_DOMAIN': 2,
         # 'DOWNLOAD_DELAY': 1,
+        'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36',
         'FEED_FORMAT': 'csv',
         'FEED_URI': 'output.csv'
     }
@@ -82,3 +86,4 @@ if __name__ == '__main__':
 
     # debug data extraction logic
     # TemplateSpider.parse(TemplateSpider, '')
+    # scrapy shell -s USER_AGENT="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36" "site.url"
